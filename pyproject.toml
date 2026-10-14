@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntecxhub-port-scanner"
+version = "2.0.0"
+description = "Multi-threaded TCP port scanner with banner grabbing, CIDR support and JSON/CSV export"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Junaideen Risny Suha" }]
+keywords = ["port-scanner", "networking", "cybersecurity", "sockets", "tcp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+  "Topic :: System :: Networking",
+  "Environment :: Console",
+]
+dependencies = []
+
+[project.scripts]
+portscan = "port_scanner:cli"
+
+[tool.setuptools]
+py-modules = ["port_scanner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

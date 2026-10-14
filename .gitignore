@@ -1,0 +1,7 @@
+scan_results.log
+*.log
+__pycache__/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
